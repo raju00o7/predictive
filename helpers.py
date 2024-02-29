@@ -223,7 +223,7 @@ def train_test_predict_plot(train, test, title):
                                name = 'predicted')
                         ],
                     layout = {'title': title,
-                                'xaxis': {'title': 'Date'},
+                                'xaxis': {'title': 'Dates'},
                                 'yaxis': {'title': 'Value'}})
     return fig
 

@@ -42,6 +42,10 @@ class Dashboard():
             ['order', 'seasonal_order', 'aic', 'aicc', 'bic']]
         self.best_result_df = best_result_df(self.grid_search_df)
         self.test['preds'] = make_predictions(self.Arima_models, self.best_result_df.index[0], n_periods=self.test_size)
+
+        print(make_predictions(self.Arima_models, self.best_result_df.index[0], n_periods=self.test_size))
+        print("================================")
+        print(make_predictions(self.Arima_models, self.best_result_df.index[0], n_periods=self.test_size*2))
         self.test['error'] = calc_errors(self.test)
 
     def main(self):
