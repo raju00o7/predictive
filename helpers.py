@@ -241,6 +241,7 @@ def metrics_table(test):
     """
     metrics_dict = {'Mean Absolute Error': [round(metrics.mean_absolute_error(test.value, test.preds), 2)],
                     'Mean Squared Error': [round(metrics.mean_squared_error(test.value, test.preds), 2)],
+                    'Root Mean Squared Error': [(round(metrics.mean_squared_error(test.value, test.preds), 2))**(1/2)],
                     'Median Absolute Error': [round(metrics.median_absolute_error(test.value, test.preds), 2)]
                     }
     metrics_table = pd.DataFrame.from_dict(metrics_dict)
